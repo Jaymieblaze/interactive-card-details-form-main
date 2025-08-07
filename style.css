@@ -167,7 +167,7 @@ body {
   color: hsl(0, 100%, 100%);
   margin-top: 0.5rem;
   font-weight: 500;
-  padding: 1rem 0;
+  padding: .7rem 0;
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
   transform: scale(1);
@@ -195,10 +195,8 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px;
   background-color: hsl(0, 100%, 100%);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
+  max-width: 300px;
   width: 100%;
   display: none;
 }
@@ -214,10 +212,9 @@ body {
   margin-bottom: 20px;
 }
 
-.success-icon svg {
-  fill: hsl(0, 100%, 100%);
-  width: 40px;
-  height: 40px;
+.success-icon {
+  width: 60px;
+  height: 60px;
 }
 
 .success-title {
@@ -271,14 +268,14 @@ body {
     visibility: hidden;
   }
   .card-front-element {
-    top: 0;
-    left: 0;
+    top: 25%;
+    left: 50%;
     transform: translateX(0);
     margin-left: 0;
   }
   .card-back-element {
-    top: 80px;
-    left: 150px;
+    top: 50%;
+    left: 60%;
     transform: translateX(0);
     margin-left: 0;
   }
@@ -290,5 +287,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .success-container {
+    max-width: 400px;
   }
 }
