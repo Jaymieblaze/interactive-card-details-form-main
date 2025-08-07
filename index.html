@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Interactive card details form</title>
+</head>
+
+<body>
+    <div class="card-display-area">
+        <div class="card-element card-front-element" id="cardFrontDisplay">
+            <div class="flex space-x-2 items-center">
+                <div class="w-8 h-8 bg-white rounded-full border-2"></div>
+                <div class="w-6 h-6 rounded-full border-2 border-white"></div>
+            </div>
+            <div class="card-number-display" id="cardNumberDisplay">
+                0000 0000 0000 0000
+            </div>
+            <div class="card-holder-info-display">
+                <span id="cardHolderNameDisplay">JANE APPLESEED</span>
+                <span id="expiryDateDisplay">00/00</span>
+            </div>
+        </div>
+        <div class="card-element card-back-element" id="cardBackDisplay">
+            <div class="cvc-strip-display" id="cvcDisplay">000</div>
+        </div>
+        <div class="card-display-band"></div>
+    </div>
+
+    <div class="form-container" id="formContainer">
+        <form id="paymentForm">
+            <div class="mb-6">
+                <label for="cardholderName" class="form-label">CARDHOLDER NAME</label>
+                <input type="text" id="cardholderName" placeholder="e.g. Jane Appleseed" class="form-input"
+                    maxlength="25" />
+                <span class="error-message" id="cardholderNameError"></span>
+            </div>
+
+            <div class="mb-6">
+                <label for="cardNumber" class="form-label">CARD NUMBER</label>
+                <input type="text" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000" class="form-input"
+                    maxlength="19" />
+                <span class="error-message" id="cardNumberError"></span>
+            </div>
+
+            <div class="expiry-cvc-group mb-8">
+                <div>
+                    <label for="expMonth" class="form-label">EXP. DATE (MM/YY)</label>
+                    <div class="month-year">
+                        <input type="text" id="expMonth" placeholder="MM" class="form-input" maxlength="2" />
+                        <input type="text" id="expYear" placeholder="YY" class="form-input" maxlength="2" />
+                    </div>
+                    <span class="error-message" id="expiryDateError"></span>
+                </div>
+                <div>
+                    <label for="cvc" class="form-label">CVC</label>
+                    <input type="text" id="cvc" placeholder="e.g. 123" class="form-input" maxlength="3" />
+                    <span class="error-message" id="cvcError"></span>
+                </div>
+            </div>
+
+            <button type="submit" class="confirm-button">Confirm</button>
+        </form>
+    </div>
+
+    <div class="success-container" id="successContainer">
+        <div class="success-icon">
+            <img src="images/icon-complete.svg" alt="complete icon" />
+        </div>
+        <h2 class="success-title">THANK YOU!</h2>
+        <p class="success-message">We've added your card details</p>
+        <button type="button" class="confirm-button" id="continueButton">
+            Continue
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
