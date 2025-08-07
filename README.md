@@ -1,105 +1,142 @@
-# Frontend Mentor - Interactive card details form
+# Interactive Card Details Form
+This project is an interactive credit card details form that allows users to input cardholder information, with real-time updates reflected on a visual card representation. The form includes input validation, error handling, and a success state upon valid submission. Built with HTML, CSS, and JavaScript, it features a responsive design optimized for both mobile and desktop devices.
 
-![Design preview for the Interactive card details form coding challenge](preview.jpg)
 
-## Welcome! 👋
+## Features
 
-Thanks for checking out this front-end coding challenge.
+* ### Real-Time Card Updates:
+  * Cardholder name updates on the card front in uppercase as the user types, defaulting to "JANE APPLESEED" if empty.
+  * Card number updates with automatic space formatting (every 4 digits), defaulting to "0000 0000 0000 0000" if empty.
+  * Expiry date (MM/YY) updates with padded zeros, defaulting to "00/00" if empty.
+  * CVC updates on the card back, defaulting to "000" if empty.
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
-**To do this challenge, you need a good understanding of HTML, CSS and JavaScript.**
+* ### Form Validation:
+  * Cardholder Name: Cannot be empty.
+  * Card Number: Must be 16 digits; non-digits are stripped, and spaces are added automatically.
+  * Expiry Date: Month (1–12) and year (not expired, compared to current date) must be valid.
+  * CVC: Must be 3 or 4 digits.
+  * Error messages display below invalid fields with a red border.
 
-## The challenge
 
-Your challenge is to build out this interactive card details form and get it looking as close to the design as possible.
+* ### Success State:
+  * Displays a "Thank You" message with a checkmark icon upon valid submission.
+  * A "Continue" button resets the form and card displays, returning to the input state.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-Your users should be able to:
+* ### Responsive Design:
+  * Mobile: Card display and form are stacked vertically, with a white band at the bottom of the card area.
+  * Desktop (≥1440px): Card display on the left (33.33% width), form centered on the right.
 
-- Fill in the form and see the card details update in real-time
-- Receive error messages when the form is submitted if:
-  - Any input field is empty
-  - The card number, expiry date, or CVC fields are in the wrong format
-- View the optimal layout depending on their device's screen size
-- See hover, active, and focus states for interactive elements on the page
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+* ### Styling:
+Uses Tailwind CSS (via CDN) for responsive layouts and custom CSS for card visuals.
+Features gradient focus effects on inputs, hover animations on buttons, and a clean, modern aesthetic with the Space Grotesk font.
 
-### Expected behaviour
 
-- Update the details on the card as the user fills in the fields
-- Validate the form fields when the form is submitted
-- If there are no errors, display the completed state
-- Reset the form when the user clicks "Continue" on the completed state
 
-**⚠️ IMPORTANT ⚠️: When you create the live version of your project, we recommmend giving it a random name for the URL. This is because with it being a fake credit card form, some browsers will open a warning notice before people can access your project. So it's best to name the project something unrelated to credit cards so that browsers don't show the warning to people viewing your project.**
+# Installation
 
-## Where to find everything
+### 1. Clone the Repository:
+```
+git clone https://github.com/Jaymieblaze/interactive-card-details-form-main.git
+cd interactive-card-details-form
+```
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+### 2. Install Dependencies:
 
-If you would like the Figma design file to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+   * No external dependencies are required, as Tailwind CSS is included via CDN and JavaScript runs natively.
+   * Ensure you have a modern web browser (e.g., Chrome, Firefox, Edge) to run the project.
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+### 3. File Setup:
 
-## Building your project
+   * Place the following files in the project directory:
+   * `index.html`: Main HTML structure.
+   * `style.css`: Custom styles for card visuals and form.
+   * `script.js`: JavaScript for real-time updates, validation, and state management.
+   * `images/`: Folder containing `bg-main-mobile.png`, `bg-main-desktop.png`, `bg-card-front.png`, `bg-card-back.png`, `favicon-32x32.png`, and `icon-complete.svg`.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
 
-## Deploying your project
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+### 4. Run the Project:
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+   * Open index.html in a web browser directly, or serve it using a local development server (e.g., Live Server in VS Code or npx http-server).
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
 
-## Create a custom `README.md`
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+# Usage
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+### 1. Open the Application:
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+   * Load index.html in a browser to view the interactive card form.
 
-## Submitting your solution
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+### 2. Interact with the Form:
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+Cardholder Name: Enter a name (e.g., "Jane Appleseed"). Updates on the card front in uppercase.
+Card Number: Enter up to 16 digits. Non-digits are removed, and spaces are added every 4 digits (e.g., "1234 5678 9123 0000").
+Expiry Date: Enter month (MM) and year (YY). Month must be 1–12, and the date must not be expired.
+CVC: Enter a 3- or 4-digit code, displayed on the card back.
+Validation: Invalid inputs trigger error messages and red borders on fields.
+Submit: Click the "Confirm" button to validate. If valid, the form hides, and a success message appears.
 
-## Sharing your solution
 
-There are multiple places you can share your solution:
+Success State:
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community).
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+A "Thank You" message with a checkmark icon appears after valid submission.
+Click the "Continue" button to reset the form and card displays (name to "JANE APPLESEED", number to "0000 0000 0000 0000", expiry to "00/00", CVC to "000") and return to the form.
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
 
-The more specific you are with your questions, the more likely it is that another member of the community will give you feedback.
+Responsive Behavior:
 
-## Got feedback for us?
+On mobile, the card display (with a white band at the bottom) and form are stacked vertically.
+On desktop (≥1440px), the card display occupies the left 33.33% of the viewport, with the form centered on the right.
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi@frontendmentor.io.
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
-**Have fun building!** 🚀
+File Structure
+interactive-card-details-form/
+├── images/
+│   ├── bg-main-mobile.png      # Mobile background for card display
+│   ├── bg-main-desktop.png     # Desktop background for card display
+│   ├── bg-card-front.png       # Card front background
+│   ├── bg-card-back.png        # Card back background
+│   ├── favicon-32x32.png       # Favicon
+│   └── icon-complete.svg       # Success icon
+├── index.html                  # Main HTML file
+├── style.css                   # Custom CSS styles
+├── script.js                   # JavaScript for interactivity and validation
+└── README.md                   # Project documentation
+
+Technologies Used
+
+HTML5: Structure for the card display, form, and success state.
+CSS3: Custom styles with Tailwind CSS (via CDN) for responsive design, gradient focus effects, and button animations.
+JavaScript: Handles real-time input updates, form validation (card number, expiry date, CVC), and toggling between form and success states.
+Fonts: Space Grotesk (via Google Fonts) for typography.
+
+Notes
+
+JavaScript Functionality:
+Real-time updates use input event listeners to sync form inputs with card displays.
+Card number formatting uses regex to strip non-digits and add spaces every 4 digits.
+Validation checks for empty fields, correct formats, and non-expired dates (relative to the current date).
+The success state toggles visibility of the form (formContainer) and success message (successContainer) using display styles.
+
+
+Known Issues:
+The card front and back elements overlap in the card display area due to identical positioning (top: 50%, left: 50%). Consider offsetting them vertically (e.g., top: 40% and top: 60%) for better visibility.
+A thin line may appear at the bottom of the .card-display-band on mobile due to rendering gaps. This is mitigated with bottom: -1px and z-index: 3 in the CSS.
+
+
+Improvements:
+Add accessibility features (e.g., ARIA labels, focus management for screen readers).
+Implement unit tests for validation logic using a testing framework (e.g., Jest).
+Optimize background images for faster loading (e.g., compress or use modern formats like WebP).
+Add support for keyboard-only navigation (e.g., ensure "Continue" button is focusable).
+
+
+License: This project is unlicensed. Contact the repository owner for usage permissions.
