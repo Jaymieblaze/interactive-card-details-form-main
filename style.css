@@ -282,7 +282,7 @@ body {
     transform: translateX(0);
     margin-left: 0;
   }
-  .form-container {
+  .form-container, .success-container {
     width: 100%;
     max-width: 500px;
     padding: 20px;
